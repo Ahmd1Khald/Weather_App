@@ -61,11 +61,20 @@ class HomeScreen extends StatelessWidget {
                             AppCubit.get(context).getData(city: value);
                           },
                           decoration: InputDecoration(
-                            label: const Text('Write City'),
-                            suffixIcon: const Icon(Icons.search),
-                            border: OutlineInputBorder(
+                            enabledBorder:  OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.white
+                              ),
                               borderRadius: BorderRadius.circular(20),
                             ),
+                            focusedBorder:  OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.white
+                              ),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            label: const Text('Write City',style: TextStyle(color: Colors.white),),
+                            suffixIcon: const Icon(Icons.search,color: Colors.white,),
                           ),
                         ),
                       ),
